@@ -49,15 +49,15 @@ public class Article {
 
 		//boucle sur les articles
 		for (Article article : articles) {
-			writer.println("<div style=\"width:800px; margin:0 auto;\"><h2><a href=\""+article.getUrl()+"\">"+article.getTitle()+"</a></h2>");
+			writer.println("<div class=\"article\"><h2><a href=\""+article.getUrl()+"\">"+article.getTitle()+"</a></h2>");
 			if (article.getImage_url() != null && !article.getImage_url().isEmpty()){
-				writer.println("<img src=\""+article.getImage_url()+"\" width=\"512\" height=\"280\">");
+				writer.println("<img src=\""+article.getImage_url()+"\">");
 			}
 			if (article.getResume() != null && !article.getResume().isEmpty()){
 				writer.println("<blockquote>"+article.getResume()+"</blockquote>");
 			}
 			
-			writer.println("<hr></div>");
+			writer.println("</div><hr>");
 		}
 
 		//foot
